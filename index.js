@@ -38,10 +38,19 @@ function addNumbers(num1, num2) {
  *   name: "Leia",
  *   email: "leia@leia.com",
  * }
+ * 
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject( id, name, email) {
+let person = {
+id,
+name,
+email,
 }
+return person;
+}
+
+makePersonObject();
+
 
 /**
  * ### Challenge `getName`
@@ -56,8 +65,8 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(personname){
+  return "Hello, my name is " + personname.name;
 }
 
 /**
@@ -73,8 +82,19 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(personName) {
+  let makeSmart ={
+    name: personName,
+
+    sum: function (num1, num2){
+      return num1 + num2;
+    },
+    
+    speak: function(){
+      return 'Hello, my name is ' + makeSmartPerson.name;
+    }
+  }
+  return makeSmart;
 }
 
 
@@ -136,8 +156,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+    console.log(inventory)
+  // return `This is a ${inventory[1].car_make} ${car_model}`;
 }
+
 
 /**
  * ### Challenge `getLastCarInfo`
